@@ -23,7 +23,7 @@ public struct ToDoArchivedItemView: View {
                 Spacer()
                 HStack(spacing: 8) {
                     Button {
-                        
+                        viewModel.deleteToDo(todo)
                         
                     } label: {
                         Image(systemName: "trash")
@@ -33,7 +33,6 @@ public struct ToDoArchivedItemView: View {
                     
                     Button {
                         viewModel.unarchiveToDo(todo)
-                        
                     } label: {
                         Image(systemName: "plus")
                             .font(.system(size: 20, weight: .semibold))
